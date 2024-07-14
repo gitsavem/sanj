@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 680px) and (max-width: 1024px){
+    header, footer{
+        padding: 80px 120px 20px 120px;
+    }
+    main{
+        padding: 0px 120px 0px 120px;
+    }
+    #Photos img{
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1024px){
+    footer{
+        padding: 60px 280px 40px 280px;
+    }
+    header div{
+        width: 50vw;
+        margin: auto;
+    }
+    main{
+        width: 50vw;
+        margin: auto;
+    }
+    #Photos img{
+        width: 60%;
+    }
+}

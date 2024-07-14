@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamSum</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Nosso Site</h1>
+            <p>Seja Bem Vindo ao Blog feito por amigos, encontre uma variedade de bobeiras, apenas para registros e publicações de sei lá, alguma coisa ksksk</p>
+            <span class="material-symbols-outlined" onclick="Navig()">arrow_drop_down</span>
+        </div>
+    </header>
+    <nav class="NavDiv">
+        <ul>
+            <li><a href="#">Ínicio</a></li>
+            <li><a href="#">Fotos</a></li>
+            <li><a href="#">Música</a></li>
+            <li><a href="#">Outro</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="MusicToday">
+            <div class="audio-player">
+                <h2>Música do Dia</h2>
+                <h3>Daniel Caeser - Best Part (feat. H.E.R)</h3>
+                <audio id="Audio" src="audios/Daniel Caesar - Best Part (Audio) ft. H.E.R..mp3"></audio>
+                <div class="custom-controls">
+                    <button onclick="playAudio()"><i class="material-symbols-outlined" id="PB">play_arrow</i></button>
+                    <button onclick="pauseAudio()"><i class="material-symbols-outlined">pause</i></button>
+                    <div class="circle"><i class="material-symbols-outlined icM">music_note</i></div>
+                </div>
+            </div>
+        </section>
+        <section id="Photos">
+            <div>
+                <h2>Fotis</h2>
+                <img src="imagens/IMG_20231224_112830.jpg" alt="Gato do KFC">
+                <h4><i>Catto do KFC</i></h4>
+                <img src="imagens/IMG_20240425_072759.jpg" alt="Gato do KFC">
+                <h4><i>Céu Bunito</i></h4>
+            </div>
+            <button class="bb"><a href="#">Mais</a></button>
+        </section>
+        <section id="Mind">
+            <div>
+                <article>
+                    <h2>Pensando em...</h2>
+                    <p id="Word">Ó céus, como eu queria estar com esse momento a todo momento, poder sentir isso que sinto agora, frequentemente ver essa doçura, tanta beleza em um só lugar, felicidade sendo exalada no ar, tem como achar outro assim? Difícil...</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Chegou ao fim, visite este site outras vezes!!</p>
+        <p id="p2">Redes Sociais:</p>
+        <div>
+            <div>
+                <img src="imagens/logos/4202090_instagram_logo_social_social media_icon.png" alt="Instagram" class="ícons">
+                <a href="https://www.instagram.com/chocolatinhorrinho/">@chocolatinhorrinho</a>
+            </div>
+            <div>
+                <img src="imagens/logos/4202090_instagram_logo_social_social media_icon.png" alt="Instagram" class="ícons">
+                <a href="https://www.instagram.com/lo_lo_ve_you_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@summy</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function Navig(){
+            if (NavDiv.style.display === 'none'){
+                NavDiv.style.display = 'block';
+            } else {
+                NavDiv.style.display = 'none';
+            }
+        }
+        var audio = document.getElementById('Audio');
+        var circle = document.querySelector('.circle');
+        function playAudio() {
+            audio.play();
+            circle.classList.add('rotate');
+        }
+        function pauseAudio() {
+            audio.pause();
+            circle.classList.remove('rotate');
+        }
+    </script>
+</body>
+</html>

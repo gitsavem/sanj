@@ -1,0 +1,209 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+PE:wght@100..400&display=swap');
+
+:root{
+    --ColorBase: #ffffff;
+    --ColorBase2: #d20ad2;
+    --ColorBase3: #63077a;
+    --ColorBack: #10081a;
+    --ColorLight: #ffff88;
+
+    --BaseFont: "Playwrite PE", cursive;
+    --BaseFont2: "Josefin Sans", sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: var(--BaseFont2);
+}
+
+body{
+    background-color: var(--ColorBack);
+}
+
+header{
+    background-color: var(--ColorBase2);
+    color: var(--ColorBase);
+    padding: 40px 40px 10px 40px;
+} header h1, p{text-align: center;}
+nav{
+    background-color: var(--ColorBase3);
+    display: none;
+} nav ul{
+    columns: 4;
+    list-style-type: none;
+    align-items: center;
+}
+main{
+    background-color: var();
+    color: var(--ColorBase);
+}
+footer{
+    background-color: var(--ColorBase2);
+    color: var(--ColorBase);
+    padding: 20px;
+} footer > div{
+    background-color: var(--ColorBase3);
+    border-radius: 20px;
+    padding: 10px;
+    columns: 1;
+    align-items: center;
+} footer > p{
+    padding-bottom: 20px;
+    width: 100%;
+} footer > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 10px 0;
+}
+
+h1{
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    font-family: var(--BaseFont);
+}
+h4{
+    padding-top: 10px; padding-bottom: 20px;
+}
+li{
+    padding: 10px 20px 5px 20px;
+    text-align: center;
+}
+li:hover{
+    background-color: var(--ColorBase2);
+    border-radius: 0px 0px 10px 10px;
+    transition-duration: .5s;
+}
+
+a{
+    color: var(--ColorBack);
+    text-decoration: none;
+}a:hover{color: var(--ColorBase);}
+span{
+    cursor: pointer;
+}
+
+audio{
+    width: 100%;
+}
+
+.ícons{
+    width: 24px;
+    margin-right: 5px; margin-left: 5px;
+}
+.bb{
+    width: 80%;
+    color: var(--ColorBase);
+    background-color: var(--ColorBase2);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+#MusicToday{
+    text-align: center;
+    font-size: 1.25em;
+    margin: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--ColorBase2);
+} #MusicToday div{
+    margin: auto;
+} #MusicToday > div, #Photos > div{
+    padding: 20px;
+} #MusicToday h2, h3{
+    padding-bottom: 10px;
+} #MusicToday h2{
+    color: var(--ColorBase2);
+    font-size: 1.5em;
+}
+
+#Photos{
+    color: var(--ColorBack);
+    background-color: var(--ColorBase);
+    text-align: center;
+    padding-bottom: 20px;
+}#Photos > div{
+    display: block;
+} #Photos h2{
+    font-size: 1.5em;
+    color: var(--ColorBase3);
+}
+#Photos img{
+    width: 80%;
+    display: block;
+    margin: auto;
+    border: 10px solid var(--ColorBack);
+    padding: 5px;
+}
+
+#Mind{
+    padding: 40px;
+} #Mind h2{
+    padding-bottom: 20px;
+} #Word::after, #Word::before{
+    content: ' " ';
+} #Mind p{
+    text-align: justify;
+    text-indent: 10px;
+    line-height: 20px;
+    font-family: var(--BaseFont);
+}
+
+#p2{
+    text-align: left;
+}
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--ColorLight);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+}
+.icM {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: var(--ColorBack);
+    cursor: none;
+}
+.rotate {
+    animation: rotateCircle 2s linear infinite;
+}
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.paused {
+    animation-play-state: paused;
+}
+
+.audio-player .custom-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-player .custom-controls button {
+    background-color: var(--ColorBase2);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 0 5px;
+    width: 48px;
+}
+
+.audio-player .custom-controls button:hover {
+    background-color: var(--ColorBase3);
+}
